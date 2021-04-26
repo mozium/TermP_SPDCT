@@ -1,54 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class playerMovement : MonoBehaviour
 {
-    private bool isMoving;
-    private Vector3 origPos, targetPos;
-    private float timeToMove = 0.25f;
+    public float moveSpeed = 5f;
+    public Rigidbody2D rigidBody;
+    public Animator animator;
+
+    Vector2 movement;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow) && !isMoving)
-        {
-            StartCoroutine(movePlayer(Vector3.up));
-        }
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(KeyCode.DownArrow) && !isMoving)
-        {
-            StartCoroutine(movePlayer(Vector3.down));
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow) && !isMoving)
-        {
-            StartCoroutine(movePlayer(Vector3.right));
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow) && !isMoving)
-        {
-            StartCoroutine(movePlayer(Vector3.left));
-        }
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
-    private IEnumerator movePlayer(Vector3 direction)
+    void FixedUpdate()
     {
-        isMoving = true;
-
-        float elapsedTime = 0f;
-
-        origPos = transform.position;
-        targetPos = origPos + direction;
-
-        while (elapsedTime < timeToMove)
-        {
-            transform.position = Vector3.Lerp(origPos, targetPos, (elapsedTime / timeToMove));
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        transform.position = targetPos;
-
-        isMoving = false;
+        rigidBody.MovePosition(rigidBody.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
