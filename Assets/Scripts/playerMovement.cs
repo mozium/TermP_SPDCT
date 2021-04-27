@@ -9,6 +9,8 @@ public class playerMovement : MonoBehaviour
     public Rigidbody2D rigidBody;
     public Animator animator;
 
+    public GameObject statue; //demo
+
     Vector2 movement;
 
     void Update()
@@ -19,6 +21,12 @@ public class playerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+
+        if (Input.GetKey(KeyCode.T)) //for demo
+        {
+            statue.GetComponent<dialogueTrigger>().TriggerDialogue();
+        }
     }
 
     void FixedUpdate()
