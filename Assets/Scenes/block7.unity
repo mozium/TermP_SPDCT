@@ -609,6 +609,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5920985736460020295, guid: d04f4bc0ad812b649a3db863e244302a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04f4bc0ad812b649a3db863e244302a, type: 3}
 --- !u!1001 &789651205
@@ -903,6 +908,7 @@ MonoBehaviour:
   moveSpeed: 5
   rigidBody: {fileID: 931363454}
   animator: {fileID: 931363452}
+  statue: {fileID: 0}
 --- !u!50 &931363454
 Rigidbody2D:
   serializedVersion: 4

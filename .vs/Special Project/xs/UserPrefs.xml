@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{8A897658-447D-C83A-845C-72655FC2F4F6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/playerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/dialogueManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/playerMovement.cs" Line="15" Column="6" />
+      <File FileName="Assets/Scripts/playerMovement.cs" Line="29" Column="10" />
       <File FileName="Assets/Scripts/dialogueTrigger.cs" Line="11" Column="67" />
       <File FileName="Assets/Scripts/dialogue.cs" Line="9" Column="19" />
-      <File FileName="Assets/Scripts/dialogueManager.cs" Line="9" Column="17" />
+      <File FileName="Assets/Scripts/dialogueManager.cs" Line="31" Column="27" />
       <File FileName="Assets/Scripts/demo.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -13,7 +13,7 @@
           <Node name="Special Project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="playerMovement.cs" selected="True" />
+                <Node name="dialogueManager.cs" selected="True" />
               </Node>
             </Node>
           </Node>
