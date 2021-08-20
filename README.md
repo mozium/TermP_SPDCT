@@ -1,11 +1,11 @@
 # ReadMe
 
 The repository is dedicated to the capstone project at National Chengchi University, started from
-* Course Name: Special Projects (C)
+* Course Name: Special Projects on Digital Content and Technology (C)
 * Course ID: 781026001
 * Semester: Fall 2020 (1091)
 
 to the following semester
-* Course Name: Special Projects (D)
+* Course Name: Special Projects on Digital Content and Technology (D)
 * Course ID: 781027001
 * Semester: Spring 2021 (1092)
