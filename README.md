@@ -12,4 +12,4 @@ The course was designed to take an academic year to complete.
 * Semester: Spring 2021 (1092)
 
 ## Snapshot
-![]()
+![](./img/init.png)
